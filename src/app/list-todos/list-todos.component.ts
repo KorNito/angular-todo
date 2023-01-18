@@ -1,5 +1,14 @@
 import { Component } from '@angular/core';
 
+export class Todo {
+  constructor(
+    public id: number,
+    public description: string,
+    public done: boolean,
+    public targetDate: Date
+  ) {}
+}
+
 @Component({
   selector: 'app-list-todos',
   templateUrl: './list-todos.component.html',
@@ -7,9 +16,9 @@ import { Component } from '@angular/core';
 })
 export class ListTodosComponent {
   todos = [
-    { id: 1, description: 'Learn HTML' },
-    { id: 2, description: 'Learn CSS' },
-    { id: 3, description: 'Learn TypeScript' },
-    { id: 4, description: 'Learn Angular' },
+    new Todo(1, 'Learn HTML', false, new Date()),
+    new Todo(2, 'Learn CSS', false, new Date()),
+    new Todo(3, 'Learn TypeScript', false, new Date()),
+    new Todo(4, 'Learn Angular', false, new Date()),
   ];
 }
