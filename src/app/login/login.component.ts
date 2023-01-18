@@ -15,7 +15,7 @@ export class LoginComponent {
 
   constructor(
     private router: Router,
-    public hardcodedAuthenticationService: HardcodedAuthenticationService
+    private hardcodedAuthenticationService: HardcodedAuthenticationService
   ) {}
 
   handleLogin() {
